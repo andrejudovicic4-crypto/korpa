@@ -9,35 +9,42 @@ const categories = [
   {
     title: "Povrće",
     description: "Sezonsko povrće sa porodičnih bašta.",
+    image: "/povrce.jpeg",
   },
   {
     title: "Voće",
     description: "Slatko i mirisno, ubrano na vrijeme.",
+    image: "/voce.jpg",
   },
   {
     title: "Mliječni proizvodi",
     description: "Sir, kajmak i jogurt iz malih mljekara.",
+    image: "/seka3.jpg",
   },
   {
     title: "Med",
     description: "Pravi med, bez dodataka i miješanja.",
+    image: "/med.jpg",
   },
   {
     title: "Domaći džemovi",
     description: "Kuvano polako, po receptima naših baka.",
-    image: "/proizvodi/seka4.jpg",
+    image: "/seka4.jpg",
   },
   {
     title: "Zimnica",
     description: "Ajvar, turšija i sokovi u tegli.",
+    image: "/zima.jpeg",
   },
   {
     title: "Pekarski proizvodi",
     description: "Hljeb, pogače i pite iz domaćih rerni.",
+    image: "/brasno.jpeg",
   },
   {
     title: "Tradicionalni specijaliteti",
     description: "Suvo meso, kobasice i domaće delicije.",
+    image: "/suvo.jpeg",
   },
 ];
 
