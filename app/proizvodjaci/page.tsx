@@ -8,89 +8,67 @@ const producers = [
     name: "Domaćinstvo Jovanović",
     location: "Ribnik",
     image: "/dom1.png",
-    story:
-      "Porodična tradicija malinara koja traje preko 30 godina. Poznati po mirisnom voću i domaćim sokovima.",
+    story: "Porodična tradicija malinara preko 30 godina.",
   },
   {
     name: "Gazdinstvo Petrović",
     location: "Vrbljani",
     image: "/dom4.png",
-    imageFit: "object-contain p-4",
-    story:
-      "Mliječni proizvodi od krava koje pasu na čistim planinskim pašnjacima. Sir i kajmak su njihov ponos.",
+    story: "Mliječni proizvodi sa planinskih pašnjaka.",
   },
   {
     name: "Pčelarstvo Ilić",
     location: "Drvar",
     image: "/dom3.png",
-    story:
-      "Med koji stiže direktno iz šume, bez dodataka i kompromisa. Ukusi livade i bagrema.",
+    story: "Prirodni med bez dodataka i kompromisa.",
   },
   {
     name: "Domaćinstvo Milić",
     location: "Šipovo",
     image: "/dom2.png",
-    story:
-      "Ručno pravljena zimnica, ajvari i domaći sokovi. Sve po receptima koji se prenose generacijama.",
+    story: "Domaća zimnica po porodičnim receptima.",
   },
 ];
 
 export default function ProducersPage() {
   return (
-    <div className="bg-transparent text-[#f3eadc]">
-      <section className="mx-auto w-full max-w-6xl px-6 py-16 sm:px-10">
+    <div className="bg-transparent">
+      {/* HEADER */}
+      <section className="mx-auto w-full max-w-6xl px-6 py-16">
         <Reveal>
-          <div className="rounded-3xl bg-[#efe1d0] p-10 shadow-lg shadow-[#d2b896]/40">
-            <p className="text-sm font-semibold uppercase tracking-wide text-[#7a6a5c]">
-              Proizvođači
-            </p>
-            <h1 className="mt-4 text-3xl font-semibold text-[#2e241f]">
-              Lica koja stoje iza svake korpe
-            </h1>
-            <p className="mt-3 max-w-2xl text-base leading-7 text-[#5a4a3f]">
-              Upoznajte domaćinstva koja svakodnevno rade na zemlji i čuvaju
-              kvalitet naših proizvoda. Svaka priča je posebna i svaka korpa
-              nosi njihove vrednosti.
-            </p>
-          </div>
+          <h1 className="text-3xl font-semibold text-[#2e241f]">
+            Proizvođači
+          </h1>
+          <p className="mt-2 max-w-2xl text-[#5a4a3f]">
+            Lica koja stoje iza svake korpe.
+          </p>
         </Reveal>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-6 pb-20 sm:px-10">
+      {/* GRID */}
+      <section className="mx-auto w-full max-w-6xl px-6 pb-20">
         <div className="grid gap-6 sm:grid-cols-2">
           {producers.map((producer, index) => (
             <Reveal key={producer.name} delay={index * 100}>
-              <div className="rounded-3xl bg-[#f6ede1] p-6 shadow-md shadow-[#d2b896]/40 transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#e0edd6] text-xl">
-                    🌿
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-[#2e241f]">
-                      {producer.name}
-                    </h3>
-                    <p className="text-xs uppercase tracking-wide text-[#7a6a5c]">
-                      {producer.location}
-                    </p>
-                  </div>
+              <div className="rounded-3xl bg-[#f6ede1] p-6 shadow-md">
+                <h3 className="text-lg font-semibold text-[#2e241f]">
+                  {producer.name}
+                </h3>
+                <p className="text-xs uppercase text-[#7a6a5c]">
+                  {producer.location}
+                </p>
+
+                <div className="mt-4 h-44 w-full overflow-hidden rounded-2xl bg-white">
+                  <Image
+                    src={producer.image}
+                    alt={producer.name}
+                    width={600}
+                    height={300}
+                    className="h-full w-full object-cover"
+                  />
                 </div>
-                <div className={`mt-4 w-full overflow-hidden rounded-2xl border border-dashed border-[#d9c4a7] bg-white/60 ${producer.imageClassName ?? "h-44"}`}>
-                  {producer.image ? (
-                    <Image
-                      src={producer.image}
-                      alt={producer.name}
-                      width={600}
-                      height={240}
-                      className={`h-full w-full ${producer.imageFit ?? "object-cover"}`}
-                    />
-                  ) : (
-                    <div className="flex h-full flex-col items-center justify-center gap-2 text-[11px] font-semibold uppercase tracking-wide text-[#7a6a5c]">
-                      <span>Prostor za fotografiju</span>
-                      <span>Proizvo?a? / gazdinstvo</span>
-                    </div>
-                  )}
-                </div>
-                <p className="mt-4 text-sm leading-6 text-[#5a4a3f]">
+
+                <p className="mt-4 text-sm text-[#5a4a3f]">
                   {producer.story}
                 </p>
               </div>
