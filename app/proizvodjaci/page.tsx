@@ -1,29 +1,35 @@
 "use client";
 
+import Image from "next/image";
 import Reveal from "../components/Reveal";
 
 const producers = [
   {
     name: "Domaćinstvo Jovanović",
     location: "Ribnik",
+    image: "/dom1.png",
     story:
       "Porodična tradicija malinara koja traje preko 30 godina. Poznati po mirisnom voću i domaćim sokovima.",
   },
   {
     name: "Gazdinstvo Petrović",
     location: "Vrbljani",
+    image: "/dom4.png",
+    imageFit: "object-contain p-4",
     story:
       "Mliječni proizvodi od krava koje pasu na čistim planinskim pašnjacima. Sir i kajmak su njihov ponos.",
   },
   {
     name: "Pčelarstvo Ilić",
     location: "Drvar",
+    image: "/dom3.png",
     story:
       "Med koji stiže direktno iz šume, bez dodataka i kompromisa. Ukusi livade i bagrema.",
   },
   {
     name: "Domaćinstvo Milić",
     location: "Šipovo",
+    image: "/dom2.png",
     story:
       "Ručno pravljena zimnica, ajvari i domaći sokovi. Sve po receptima koji se prenose generacijama.",
   },
@@ -68,11 +74,21 @@ export default function ProducersPage() {
                     </p>
                   </div>
                 </div>
-                <div className="mt-4 h-36 w-full rounded-2xl border border-dashed border-[#d9c4a7] bg-white/60">
-                  <div className="flex h-full flex-col items-center justify-center gap-2 text-[11px] font-semibold uppercase tracking-wide text-[#7a6a5c]">
-                    <span>Prostor za fotografiju</span>
-                    <span>Proizvođač / gazdinstvo</span>
-                  </div>
+                <div className={`mt-4 w-full overflow-hidden rounded-2xl border border-dashed border-[#d9c4a7] bg-white/60 ${producer.imageClassName ?? "h-44"}`}>
+                  {producer.image ? (
+                    <Image
+                      src={producer.image}
+                      alt={producer.name}
+                      width={600}
+                      height={240}
+                      className={`h-full w-full ${producer.imageFit ?? "object-cover"}`}
+                    />
+                  ) : (
+                    <div className="flex h-full flex-col items-center justify-center gap-2 text-[11px] font-semibold uppercase tracking-wide text-[#7a6a5c]">
+                      <span>Prostor za fotografiju</span>
+                      <span>Proizvo?a? / gazdinstvo</span>
+                    </div>
+                  )}
                 </div>
                 <p className="mt-4 text-sm leading-6 text-[#5a4a3f]">
                   {producer.story}

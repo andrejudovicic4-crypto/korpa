@@ -17,7 +17,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Korpa na Pragu",
+  title: "Korpa na pragu",
   description:
     "Moderna platforma za kupovinu domaćih proizvoda direktno od proizvođača.",
 };

@@ -1,12 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import Reveal from "../components/Reveal";
 
 const sections = [
   {
     title: "Naša priča",
     content:
-      "Korpa na Pragu nastala je iz želje da domaći proizvodi dobiju mjesto koje zaslužuju. Grad i selo su često daleko, ali povjerenje i kvalitet mogu da ih spoje.",
+      "Korpa na pragu nastala je iz želje da domaći proizvodi dobiju mjesto koje zaslužuju. Grad i selo su često daleko, ali povjerenje i kvalitet mogu da ih spoje.",
   },
   {
     title: "Misija",
@@ -38,14 +39,23 @@ export default function AboutPage() {
               Tradicija i tehnologija na istoj strani
             </h1>
             <p className="mt-3 max-w-2xl text-base leading-7 text-[#5a4a3f]">
-              Spajamo autentične domaće proizvode sa modernim digitalnim
-              iskustvom kako bi kupovina bila jednostavna, brza i sigurna.
+              Korpa na pragu nastala je iz potrebe da se tradicionalna proizvodnja
+              prilagodi savremenom na?inu ?ivota, bez gubitka kvaliteta i
+              autenti?nosti. Na?a platforma omogu?ava direktnu saradnju sa lokalnim
+              proizvo?a?ima, ?ime se obezbje?uje transparentnost, povjerenje i fer
+              odnos prema svima uklju?enima. Poseban fokus stavljamo na porijeklo
+              proizvoda, odr?ivost i podr?ku lokalnoj ekonomiji. Kroz digitalna
+              rje?enja stvaramo prostor u kojem tradicija ne nestaje, ve? dobija novu
+              vrijednost i ?ansu za razvoj.
             </p>
-            <div className="h-[220px] w-full rounded-3xl border border-dashed border-[#d9c4a7] bg-white/60 shadow-lg shadow-[#d2b896]/40 lg:col-start-2 lg:row-span-3">
-              <div className="flex h-full flex-col items-center justify-center gap-2 text-xs font-semibold uppercase tracking-wide text-[#7a6a5c]">
-                <span>Prostor za fotografiju</span>
-                <span>Domaćinstvo / tradicija</span>
-              </div>
+            <div className="relative h-[220px] w-full overflow-hidden rounded-3xl shadow-lg shadow-[#d2b896]/40 lg:col-start-2 lg:row-span-3">
+              <Image
+                src="/trad.jpg"
+                alt="Domaćinstvo i tradicija"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1f1915]/50 via-transparent to-transparent" />
             </div>
           </div>
         </Reveal>

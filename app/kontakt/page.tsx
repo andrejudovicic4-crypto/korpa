@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Button from "../components/Button";
 import Modal from "../components/Modal";
 import Reveal from "../components/Reveal";
@@ -59,11 +60,14 @@ export default function ContactPage() {
 
           <Reveal delay={150}>
             <div className="flex h-full flex-col gap-6 rounded-3xl bg-[#efe1d0] p-8 shadow-md shadow-[#d2b896]/40">
-              <div className="h-40 w-full rounded-2xl border border-dashed border-[#d9c4a7] bg-white/60">
-                <div className="flex h-full flex-col items-center justify-center gap-2 text-[11px] font-semibold uppercase tracking-wide text-[#7a6a5c]">
-                  <span>Prostor za fotografiju</span>
-                  <span>Domaćinstva / proizvodi</span>
-                </div>
+              <div className="relative h-40 w-full overflow-hidden rounded-2xl shadow-md shadow-[#d2b896]/30">
+                <Image
+                  src="/pro.jpg"
+                  alt="Postani proizvođač"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1f1915]/45 via-transparent to-transparent" />
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-[#2e241f]">

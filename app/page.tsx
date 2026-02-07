@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Button from "./components/Button";
 import Card from "./components/Card";
 import Modal from "./components/Modal";
@@ -97,7 +98,7 @@ export default function HomePage() {
                 textShadow: "0 6px 18px rgba(20, 16, 12, 0.45)",
               }}
             >
-              Korpa na Pragu
+              Korpa na pragu
             </h1>
             <p
               className="mt-4 text-lg leading-8 text-[#efe3d6]"
@@ -123,11 +124,15 @@ export default function HomePage() {
             </div>
             </Reveal>
             <Reveal delay={150}>
-              <div className="h-[320px] w-full rounded-3xl border border-dashed border-[#d9c4a7] bg-white/60 shadow-lg shadow-[#d2b896]/40">
-                <div className="flex h-full flex-col items-center justify-center gap-2 text-xs font-semibold uppercase tracking-wide text-[#7a6a5c]">
-                  <span>Prostor za fotografiju</span>
-                  <span>Hero vizual / korpa proizvoda</span>
-                </div>
+              <div className="relative h-[320px] w-full overflow-hidden rounded-3xl shadow-lg shadow-[#0f0c0a]/40">
+                <Image
+                  src="/zemlja.jpg"
+                  alt="Hero vizual"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1f1915]/60 via-transparent to-transparent" />
               </div>
             </Reveal>
           </div>
@@ -164,13 +169,29 @@ export default function HomePage() {
                 O platformi
               </p>
               <h2 className="mt-4 text-3xl font-semibold text-[#2e241f]">
-                Tradicija koja stiže na vaš prag
+                TRADICIJA KOJA STIŽE NA VAŠ PRAG
               </h2>
               <p className="mt-4 text-base leading-7 text-[#5a4a3f]">
-                Korpa na Pragu je digitalna pijaca koja povezuje selo i grad.
-                Naš cilj je da podržimo ruralne porodice, obezbijedimo sigurnu
-                prodaju proizvođačima i omogućimo kupcima da dobiju autentične
-                domaće proizvode.
+                Korpa na pragu je digitalna pijaca koja povezuje selo i grad,
+                spajajući bogatu domaću tradiciju sa savremenim načinom
+                kupovine. Platforma je osmišljena kako bi lokalnim proizvođačima
+                omogućila siguran i pravedan plasman proizvoda, a kupcima
+                jednostavan pristup provjerenim domaćim namirnicama direktno sa
+                sela, bez nepotrebnih posrednika.
+              </p>
+              <p className="mt-4 text-base leading-7 text-[#5a4a3f]">
+                Naš cilj je da podržimo ruralne porodice i male poljoprivredne
+                proizvođače, očuvamo tradicionalne recepte i načine proizvodnje,
+                te doprinesemo razvoju lokalne zajednice. Kroz Korpu na pragu
+                svaki proizvod ima jasno porijeklo, priču i vrijednost, jer
+                vjerujemo da domaća hrana nije samo roba, već dio kulture i
+                identiteta.
+              </p>
+              <p className="mt-4 text-base leading-7 text-[#5a4a3f]">
+                Kupcima nudimo povjerenje, kvalitet i autentičnost, uz
+                praktičnost online kupovine i dostavu na kućnu adresu. Korpa na
+                pragu gradi most između ljudi, hrane i tradicije, donoseći
+                istinske domaće proizvode pravo na vaš prag.
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -233,7 +254,7 @@ export default function HomePage() {
           <div className="rounded-3xl bg-[#efe1d0] p-10 shadow-lg shadow-[#d2b896]/40">
             <div className="flex flex-col gap-3">
               <p className="text-sm font-semibold uppercase tracking-wide text-[#7a6a5c]">
-                Zašto Korpa na Pragu
+                Zašto Korpa na pragu
               </p>
               <h2 className="text-3xl font-semibold text-[#2e241f]">
                 Povjerenje, svježina i podrška selu
