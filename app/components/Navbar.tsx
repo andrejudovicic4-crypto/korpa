@@ -89,13 +89,13 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 w-full border-b border-white/30 bg-[#efe1d0]/70 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 sm:px-10">
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-24 w-24 items-center justify-center rounded-full bg-transparent shadow-md shadow-black/20">
+          <div className="flex h-28 w-28 items-center justify-center rounded-full bg-[#2e241f]/70 shadow-md shadow-black/30 backdrop-blur">
             <Image
-              src="/Logoseka.jpg"
+              src="/Novilogo.png"
               alt="Korpa na pragu logo"
-              width={96}
-              height={96}
-              className="h-20 w-20 rounded-full object-cover"
+              width={112}
+              height={112}
+              className="h-24 w-24 rounded-full object-cover"
               priority
             />
           </div>

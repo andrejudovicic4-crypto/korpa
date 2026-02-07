@@ -126,7 +126,7 @@ export default function HomePage() {
             <Reveal delay={150}>
               <div className="relative h-[320px] w-full overflow-hidden rounded-3xl shadow-lg shadow-[#0f0c0a]/40">
                 <Image
-                  src="/zemlja.jpg"
+                  src="/Novilogo.png"
                   alt="Hero vizual"
                   fill
                   className="object-cover"
