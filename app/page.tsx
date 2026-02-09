@@ -71,7 +71,12 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="bg-transparent text-[#f3eadc]">
+    <div className="relative overflow-hidden bg-transparent text-[#f3eadc]">
+      <div className="pointer-events-none absolute inset-0 opacity-[0.25]">
+        <div className="absolute -top-32 right-[-8rem] h-72 w-72 rounded-full bg-[#f6c35b]/25 blur-3xl" />
+        <div className="absolute top-[30%] left-[-6rem] h-64 w-64 rounded-full bg-[#7fb069]/18 blur-3xl" />
+        <div className="absolute bottom-[-10rem] right-[10%] h-80 w-80 rounded-full bg-[#f08a3e]/15 blur-3xl" />
+      </div>
       <section ref={heroRef} className="relative overflow-hidden">
         <div className="absolute inset-0 translate-y-[var(--hero-shift,0px)]">
           <div className="absolute inset-0 bg-[linear-gradient(135deg,#2d241f_0%,#3a3326_45%,#2f3a26_100%)]" />
@@ -163,7 +168,7 @@ export default function HomePage() {
 
       <section className="mx-auto w-full max-w-6xl px-6 py-16 sm:px-10">
         <Reveal>
-          <div className="relative grid gap-8 overflow-hidden rounded-3xl bg-[#efe1d0] p-10 shadow-lg shadow-[#d2b896]/40 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="relative grid gap-8 overflow-hidden rounded-3xl border border-white/50 bg-[#efe1d0] p-10 shadow-lg shadow-[#d2b896]/40 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="pointer-events-none absolute inset-0 opacity-[0.08] mix-blend-soft-light bg-[repeating-linear-gradient(0deg,rgba(255,255,255,0.25)_0,rgba(255,255,255,0.25)_1px,rgba(0,0,0,0)_1px,rgba(0,0,0,0)_3px)]" />
             <div>
               <p className="inline-flex w-fit items-center rounded-full bg-white/70 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-[#7a6a5c] shadow-sm">
@@ -172,6 +177,7 @@ export default function HomePage() {
               <h2 className="mt-4 text-3xl font-semibold text-[#2e241f]">
                 TRADICIJA KOJA STIŽE NA VAŠ PRAG
               </h2>
+              <div className="mt-3 h-1 w-16 rounded-full bg-[#f6c35b]/80" />
               <p className="mt-4 text-base leading-7 text-[#5a4a3f]">
                 Korpa na pragu je digitalna pijaca koja povezuje selo i grad,
                 spajajući bogatu domaću tradiciju sa savremenim načinom
@@ -223,14 +229,16 @@ export default function HomePage() {
 
       <section className="mx-auto w-full max-w-6xl px-6 pb-16 sm:px-10">
         <Reveal>
-          <div className="rounded-3xl bg-[#f6ede1] p-10 shadow-lg shadow-[#d2b896]/40">
+          <div className="relative overflow-hidden rounded-3xl border border-white/50 bg-[#f6ede1] p-10 shadow-lg shadow-[#d2b896]/40">
+            <div className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-soft-light bg-[repeating-linear-gradient(90deg,rgba(255,255,255,0.2)_0,rgba(255,255,255,0.2)_1px,rgba(0,0,0,0)_1px,rgba(0,0,0,0)_3px)]" />
             <div className="flex flex-col gap-3">
-              <p className="text-sm font-semibold uppercase tracking-wide text-[#7a6a5c]">
+              <p className="inline-flex w-fit items-center rounded-full bg-white/70 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-[#7a6a5c] shadow-sm">
                 Izdvojene kategorije
               </p>
               <h2 className="text-3xl font-semibold text-[#2e241f]">
                 Proizvodi koje porodice najviše vole
               </h2>
+              <div className="h-1 w-14 rounded-full bg-[#f08a3e]/70" />
               <p className="text-base text-[#5a4a3f]">
                 Pronađite sve što vam treba za svakodnevnu trpezu, uz provjereno
                 porijeklo i ukus doma.
@@ -252,14 +260,16 @@ export default function HomePage() {
 
       <section className="mx-auto w-full max-w-6xl px-6 pb-16 sm:px-10">
         <Reveal>
-          <div className="rounded-3xl bg-[#efe1d0] p-10 shadow-lg shadow-[#d2b896]/40">
+          <div className="relative overflow-hidden rounded-3xl border border-white/50 bg-[#efe1d0] p-10 shadow-lg shadow-[#d2b896]/40">
+            <div className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-soft-light bg-[repeating-linear-gradient(90deg,rgba(255,255,255,0.2)_0,rgba(255,255,255,0.2)_1px,rgba(0,0,0,0)_1px,rgba(0,0,0,0)_3px)]" />
             <div className="flex flex-col gap-3">
-              <p className="text-sm font-semibold uppercase tracking-wide text-[#7a6a5c]">
+              <p className="inline-flex w-fit items-center rounded-full bg-white/70 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-[#7a6a5c] shadow-sm">
                 Zašto Korpa na pragu
               </p>
               <h2 className="text-3xl font-semibold text-[#2e241f]">
                 Povjerenje, svježina i podrška selu
               </h2>
+              <div className="h-1 w-14 rounded-full bg-[#7fb069]/70" />
             </div>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {benefits.map((benefit) => (
@@ -277,7 +287,8 @@ export default function HomePage() {
 
       <section className="mx-auto w-full max-w-6xl px-6 pb-20 sm:px-10">
         <Reveal>
-          <div className="rounded-3xl bg-gradient-to-r from-[#f08a3e] via-[#f6c35b] to-[#f3eadc] p-10 text-[#2e241f] shadow-lg shadow-[#f08a3e]/30">
+          <div className="relative overflow-hidden rounded-3xl border border-white/40 bg-gradient-to-r from-[#f08a3e] via-[#f6c35b] to-[#f3eadc] p-10 text-[#2e241f] shadow-lg shadow-[#f08a3e]/30">
+            <div className="pointer-events-none absolute inset-0 opacity-[0.12] mix-blend-soft-light bg-[repeating-linear-gradient(0deg,rgba(255,255,255,0.2)_0,rgba(255,255,255,0.2)_1px,rgba(0,0,0,0)_1px,rgba(0,0,0,0)_3px)]" />
             <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
               <div className="max-w-2xl">
                 <h2 className="text-3xl font-semibold">

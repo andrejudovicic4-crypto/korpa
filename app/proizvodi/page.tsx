@@ -105,10 +105,14 @@ const placeholderMenu = [
 
 export default function ProductsPage() {
   return (
-    <div className="bg-transparent text-[#f3eadc]">
+    <div className="relative overflow-hidden bg-transparent text-[#f3eadc]">
+      <div className="pointer-events-none absolute inset-0 opacity-[0.2]">
+        <div className="absolute -top-24 right-[-6rem] h-64 w-64 rounded-full bg-[#f6c35b]/20 blur-3xl" />
+        <div className="absolute top-[35%] left-[-5rem] h-56 w-56 rounded-full bg-[#7fb069]/15 blur-3xl" />
+      </div>
       <section className="mx-auto w-full max-w-6xl px-6 py-16 sm:px-10">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl bg-[#efe1d0] p-10 shadow-lg shadow-[#d2b896]/40">
+          <div className="relative overflow-hidden rounded-3xl border border-white/50 bg-[#efe1d0] p-10 shadow-lg shadow-[#d2b896]/40">
             <div className="pointer-events-none absolute inset-0 opacity-[0.08] mix-blend-soft-light bg-[repeating-linear-gradient(0deg,rgba(255,255,255,0.25)_0,rgba(255,255,255,0.25)_1px,rgba(0,0,0,0)_1px,rgba(0,0,0,0)_3px)]" />
             <p className="inline-flex w-fit items-center rounded-full bg-white/70 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-[#7a6a5c] shadow-sm">
               Proizvodi
@@ -116,6 +120,7 @@ export default function ProductsPage() {
             <h1 className="mt-4 text-3xl font-semibold text-[#2e241f]">
               Istražite domaće kategorije
             </h1>
+            <div className="mt-3 h-1 w-14 rounded-full bg-[#f6c35b]/70" />
             <p className="mt-3 max-w-2xl text-base leading-7 text-[#5a4a3f]">
               Sve kategorije su pažljivo birane i provjerene. Pronađite ukus koji
               vam najviše prija i naručite direktno od proizvođača.
@@ -140,7 +145,7 @@ export default function ProductsPage() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((item, index) => (
             <Reveal key={item.title} delay={index * 80}>
-              <div className="group rounded-3xl bg-[#efe1d0] p-5 shadow-md shadow-[#d2b896]/40 transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div className="group rounded-3xl border border-white/40 bg-[#efe1d0] p-5 shadow-md shadow-[#d2b896]/40 transition duration-300 hover:-translate-y-1 hover:shadow-lg">
                 <div className="group relative h-36 w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[#f6c35b]/40 via-[#fff2c5] to-[#e0edd6]">
                   {item.image ? (
                     <Image
