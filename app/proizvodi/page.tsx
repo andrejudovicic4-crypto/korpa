@@ -14,7 +14,7 @@ const categories = [
     // TODO: Replace placeholder hrefs with real links.
     menu: [
       { label: "Zeleni Breg", href: "#" },
-      { label: "Doma?ePovr?e", href: "#" },
+      { label: "DomaćePovrće", href: "#" },
       { label: "Etnoselo", href: "#" },
     ],
   },
@@ -24,7 +24,7 @@ const categories = [
     image: "/voce.jpg",
     // TODO: Replace placeholder hrefs with real links.
     menu: [
-      { label: "Vo?arProm", href: "#" },
+      { label: "VoćarProm", href: "#" },
       { label: "Crvena Jabuka", href: "#" },
       { label: "Jagodica", href: "#" },
     ],
@@ -35,9 +35,9 @@ const categories = [
     image: "/seka3.jpg",
     // TODO: Replace placeholder hrefs with real links.
     menu: [
-      { label: "Mljekara Gatari?", href: "#" },
+      { label: "Mljekara Gatarić", href: "#" },
       { label: "Kozaramlek", href: "#" },
-      { label: "Gazdinstvo D?aji?", href: "#" },
+      { label: "Gazdinstvo Džajić", href: "#" },
     ],
   },
   {
@@ -47,7 +47,7 @@ const categories = [
     // TODO: Replace placeholder hrefs with real links.
     menu: [
       { label: "Medarba", href: "#" },
-      { label: "P?elica", href: "#" },
+      { label: "Pčelica", href: "#" },
       { label: "Polen", href: "#" },
     ],
   },
@@ -58,7 +58,7 @@ const categories = [
     // TODO: Replace placeholder hrefs with real links.
     menu: [
       { label: "Nektar", href: "#" },
-      { label: "Gazidnstvo ?ari?", href: "#" },
+      { label: "Gazidnstvo Šarić", href: "#" },
       { label: "Kajsija", href: "#" },
     ],
   },
@@ -69,7 +69,7 @@ const categories = [
     // TODO: Replace placeholder hrefs with real links.
     menu: [
       { label: "KiseloBA", href: "#" },
-      { label: "Tur?ija.com", href: "#" },
+      { label: "Turšija.com", href: "#" },
       { label: "Zimnica", href: "#" },
     ],
   },
@@ -79,7 +79,7 @@ const categories = [
     image: "/brasno.jpeg",
     // TODO: Replace placeholder hrefs with real links.
     menu: [
-      { label: "?itar", href: "#" },
+      { label: "Žitar", href: "#" },
       { label: "Klas", href: "#" },
       { label: "Polje", href: "#" },
     ],
@@ -90,8 +90,8 @@ const categories = [
     image: "/suvo.jpeg",
     // TODO: Replace placeholder hrefs with real links.
     menu: [
-      { label: "Gazdinstvo Udovi?i?", href: "#" },
-      { label: "Ko?i?", href: "#" },
+      { label: "Gazdinstvo Udovičić", href: "#" },
+      { label: "Kočić", href: "#" },
       { label: "Sitnica", href: "#" },
     ],
   },
