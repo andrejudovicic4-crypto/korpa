@@ -21,7 +21,7 @@ export default function ContactPage() {
               Tu smo da odgovorimo brzo i srdačno
             </h1>
             <p className="mt-3 max-w-2xl text-base leading-7 text-[#5a4a3f]">
-              Pošaljite nam poruku ili narudžbinu, a mi ćemo vas kontaktirati sa
+              Pošaljite nam poruku ili narudžbu, a mi ćemo vas kontaktirati sa
               potvrdom i terminom isporuke.
             </p>
           </div>
