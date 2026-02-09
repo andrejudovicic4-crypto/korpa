@@ -163,9 +163,10 @@ export default function HomePage() {
 
       <section className="mx-auto w-full max-w-6xl px-6 py-16 sm:px-10">
         <Reveal>
-          <div className="grid gap-8 rounded-3xl bg-[#efe1d0] p-10 shadow-lg shadow-[#d2b896]/40 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="relative grid gap-8 overflow-hidden rounded-3xl bg-[#efe1d0] p-10 shadow-lg shadow-[#d2b896]/40 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="pointer-events-none absolute inset-0 opacity-[0.08] mix-blend-soft-light bg-[repeating-linear-gradient(0deg,rgba(255,255,255,0.25)_0,rgba(255,255,255,0.25)_1px,rgba(0,0,0,0)_1px,rgba(0,0,0,0)_3px)]" />
             <div>
-              <p className="text-sm font-semibold uppercase tracking-wide text-[#7a6a5c]">
+              <p className="inline-flex w-fit items-center rounded-full bg-white/70 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-[#7a6a5c] shadow-sm">
                 O platformi
               </p>
               <h2 className="mt-4 text-3xl font-semibold text-[#2e241f]">

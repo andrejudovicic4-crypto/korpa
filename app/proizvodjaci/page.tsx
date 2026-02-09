@@ -37,11 +37,15 @@ const producers = [
 export default function ProducersPage() {
   return (
     <div className="mx-auto max-w-6xl px-6 py-16">
-      <h1 className="text-3xl font-bold mb-8">Proizvođači</h1>
+      <h1 className="mb-8 text-3xl font-bold">Proizvođači</h1>
 
       <div className="grid gap-6 sm:grid-cols-2">
         {producers.map((p) => (
-          <div key={p.name} className="rounded-2xl bg-[#f6ede1] p-6 shadow">
+          <div
+            key={p.name}
+            className="relative overflow-hidden rounded-2xl bg-[#f6ede1] p-6 shadow"
+          >
+            <div className="pointer-events-none absolute inset-0 opacity-[0.08] mix-blend-soft-light bg-[repeating-linear-gradient(0deg,rgba(255,255,255,0.22)_0,rgba(255,255,255,0.22)_1px,rgba(0,0,0,0)_1px,rgba(0,0,0,0)_3px)]" />
             <h3 className="text-lg font-semibold">{p.name}</h3>
             <p className="text-sm text-gray-600">{p.location}</p>
 
