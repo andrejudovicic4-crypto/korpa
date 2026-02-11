@@ -41,11 +41,15 @@ const producers = [
 export default function ProducersPage() {
   return (
     <div className="relative overflow-hidden mx-auto max-w-6xl px-6 py-16">
-      <div className="pointer-events-none absolute inset-0 opacity-[0.2]">
-        <div className="absolute -top-24 right-[-6rem] h-64 w-64 rounded-full bg-[#f6c35b]/20 blur-3xl" />
-        <div className="absolute top-[35%] left-[-5rem] h-56 w-56 rounded-full bg-[#7fb069]/15 blur-3xl" />
-        <div className="absolute -bottom-24 right-[20%] h-72 w-72 rounded-full bg-[#f09a3e]/20 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(240,154,62,0.12)_0%,transparent_45%),radial-gradient(circle_at_80%_90%,rgba(127,176,105,0.12)_0%,transparent_45%)]" />
+      <div className="pointer-events-none absolute inset-0 opacity-[0.32]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_8%,rgba(240,154,62,0.22)_0%,transparent_45%),radial-gradient(circle_at_88%_16%,rgba(246,195,91,0.18)_0%,transparent_40%),radial-gradient(circle_at_18%_86%,rgba(127,176,105,0.2)_0%,transparent_45%),radial-gradient(circle_at_82%_82%,rgba(240,154,62,0.16)_0%,transparent_45%)]" />
+        <div className="absolute -top-24 right-[-6rem] h-64 w-64 rounded-full bg-[#f6c35b]/25 blur-3xl" />
+        <div className="absolute top-[35%] left-[-5rem] h-56 w-56 rounded-full bg-[#7fb069]/22 blur-3xl" />
+        <div className="absolute -bottom-24 right-[20%] h-72 w-72 rounded-full bg-[#f09a3e]/25 blur-3xl" />
+        <div className="absolute top-[-6rem] left-[20%] h-72 w-72 rounded-full bg-[#f09a3e]/18 blur-[90px]" />
+        <div className="absolute bottom-[-8rem] left-[-4rem] h-80 w-80 rounded-full bg-[#f6c35b]/18 blur-[110px]" />
+        <div className="absolute inset-0 opacity-[0.25] mix-blend-soft-light bg-[radial-gradient(rgba(255,255,255,0.55)_1px,transparent_1px)] [background-size:9px_9px]" />
+        <div className="absolute inset-0 opacity-[0.25] bg-[linear-gradient(120deg,rgba(240,154,62,0.08)_0%,transparent_35%,rgba(127,176,105,0.08)_70%,transparent_100%)]" />
       </div>
       <h1 className="mb-8 text-3xl font-bold">Proizvođači</h1>
 
