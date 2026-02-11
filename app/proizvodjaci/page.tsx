@@ -59,11 +59,14 @@ export default function ProducersPage() {
 
             <figure className="mt-4">
               <div className="relative h-44 overflow-hidden rounded-2xl border border-white/60 bg-white/60 shadow-md shadow-[#d2b896]/30">
+                <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-br from-[#e9f5e0]/50 via-transparent to-[#c7e3b8]/30" />
+                <div className="pointer-events-none absolute inset-0 z-10 opacity-[0.18] mix-blend-soft-light bg-[radial-gradient(rgba(255,255,255,0.7)_1px,transparent_1px)] [background-size:7px_7px]" />
+                <div className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(180deg,rgba(0,0,0,0.0)_0%,rgba(0,0,0,0.15)_100%)]" />
                 <Image
                   src={p.image}
                   alt={p.name}
                   fill
-                  className={p.imageFit ?? "object-cover"}
+                  className={`${p.imageFit ?? "object-cover"} brightness-[1.07] contrast-[1.05] saturate-[1.12] hue-rotate-[-6deg]`}
                 />
               </div>
               <figcaption className="mt-2 text-sm font-semibold text-center text-[#5b4636]">
