@@ -6,6 +6,7 @@ const producers = [
   {
     name: "Domaćinstvo Jovanović",
     location: "Ribnik",
+    caption: "Ribnik - Domaćinstvo Jovanović",
     image: "/dom1.png",
     story:
       "Porodična tradicija malinara koja traje preko 30 godina. Poznati po mirisnom voću i domaćim sokovima.",
@@ -13,6 +14,7 @@ const producers = [
   {
     name: "Gazdinstvo Petrović",
     location: "Vrbljani",
+    caption: "Vrbljani - Domaćinstvo Petrović",
     image: "/dom4.png",
     imageFit: "object-contain p-4",
     story:
@@ -21,6 +23,7 @@ const producers = [
   {
     name: "Pčelarstvo Ilić",
     location: "Drvar",
+    caption: "Drvar - Pčelarstvo Ilić",
     image: "/dom3.png",
     story:
       "Med koji stiže direktno iz šume, bez dodataka i kompromisa. Ukusi livade i bagrema.",
@@ -28,6 +31,7 @@ const producers = [
   {
     name: "Domaćinstvo Milić",
     location: "Šipovo",
+    caption: "Šipovo - Gazdinstvo Milić",
     image: "/dom2.png",
     story:
       "Ručno pravljena zimnica, ajvari i domaći sokovi. Sve po receptima koji se prenose generacijama.",
@@ -61,6 +65,9 @@ export default function ProducersPage() {
                 className={p.imageFit ?? "object-cover"}
               />
             </div>
+            <p className="mt-2 text-sm font-semibold text-[#5b4636]">
+              {p.caption}
+            </p>
 
             <p className="mt-4 text-sm">{p.story}</p>
           </div>
