@@ -69,7 +69,7 @@ export default function BlogPage() {
           <p className="text-sm uppercase tracking-[0.25em] text-white">
             Blog
           </p>
-          <h1 className="mt-2 text-4xl font-bold text-white sm:text-5xl">
+          <h1 className="mt-2 text-4xl font-bold text-[#f08a3e] sm:text-5xl">
             Poljoprivredni magazin sa duĹˇom sela
           </h1>
           <p className="mt-3 max-w-2xl text-base text-[#f3eadc]">
