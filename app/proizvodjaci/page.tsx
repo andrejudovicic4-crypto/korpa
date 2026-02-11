@@ -6,7 +6,7 @@ const producers = [
   {
     name: "Domaćinstvo Jovanović",
     location: "Ribnik",
-    caption: "Ribnik - Domaćinstvo Jovanović",
+    caption: "Ribnik - Doma\u0107instvo Jovanovi\u0107",
     image: "/dom1.png",
     story:
       "Porodična tradicija malinara koja traje preko 30 godina. Poznati po mirisnom voću i domaćim sokovima.",
@@ -14,7 +14,7 @@ const producers = [
   {
     name: "Gazdinstvo Petrović",
     location: "Vrbljani",
-    caption: "Vrbljani - Domaćinstvo Petrović",
+    caption: "Vrbljani - Doma\u0107instvo Petrovi\u0107",
     image: "/dom4.png",
     imageFit: "object-contain p-4",
     story:
@@ -23,7 +23,7 @@ const producers = [
   {
     name: "Pčelarstvo Ilić",
     location: "Drvar",
-    caption: "Drvar - Pčelarstvo Ilić",
+    caption: "Drvar - P\u010delarstvo Ili\u0107",
     image: "/dom3.png",
     story:
       "Med koji stiže direktno iz šume, bez dodataka i kompromisa. Ukusi livade i bagrema.",
@@ -31,7 +31,7 @@ const producers = [
   {
     name: "Domaćinstvo Milić",
     location: "Šipovo",
-    caption: "Šipovo - Gazdinstvo Milić",
+    caption: "\u0160ipovo - Gazdinstvo Mili\u0107",
     image: "/dom2.png",
     story:
       "Ručno pravljena zimnica, ajvari i domaći sokovi. Sve po receptima koji se prenose generacijama.",
@@ -57,17 +57,19 @@ export default function ProducersPage() {
             <h3 className="text-lg font-semibold">{p.name}</h3>
             <p className="text-sm text-gray-600">{p.location}</p>
 
-            <div className="mt-4 relative h-44 overflow-hidden rounded-2xl border border-white/60 bg-white/60 shadow-md shadow-[#d2b896]/30">
-              <Image
-                src={p.image}
-                alt={p.name}
-                fill
-                className={p.imageFit ?? "object-cover"}
-              />
-            </div>
-            <p className="mt-2 text-sm font-semibold text-[#5b4636]">
-              {p.caption}
-            </p>
+            <figure className="mt-4">
+              <div className="relative h-44 overflow-hidden rounded-2xl border border-white/60 bg-white/60 shadow-md shadow-[#d2b896]/30">
+                <Image
+                  src={p.image}
+                  alt={p.name}
+                  fill
+                  className={p.imageFit ?? "object-cover"}
+                />
+              </div>
+              <figcaption className="mt-2 text-sm font-semibold text-center text-[#5b4636]">
+                {p.caption}
+              </figcaption>
+            </figure>
 
             <p className="mt-4 text-sm">{p.story}</p>
           </div>
