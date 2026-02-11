@@ -89,21 +89,35 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-white/30 bg-[#efe1d0]/70 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 sm:px-10">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-28 w-28 items-center justify-center rounded-full bg-[#2e241f]/70 shadow-md shadow-black/30 backdrop-blur">
-            <Image
-              src="/Novilogo.png"
-              alt="Korpa na pragu logo"
-              width={112}
-              height={112}
-              className="h-24 w-24 rounded-full object-cover"
-              priority
-            />
+        <div className="flex items-center gap-4">
+          <Link href="/" className="flex items-center gap-3">
+            <div className="flex h-28 w-28 items-center justify-center rounded-full bg-[#2e241f]/70 shadow-md shadow-black/30 backdrop-blur">
+              <Image
+                src="/Novilogo.png"
+                alt="Korpa na pragu logo"
+                width={112}
+                height={112}
+                className="h-24 w-24 rounded-full object-cover"
+                priority
+              />
+            </div>
+            <span className="hidden text-lg font-semibold text-[#2f5d2a] sm:block">
+              Korpa na pragu
+            </span>
+          </Link>
+          <div className="hidden items-center gap-2 md:flex">
+            {socialLinks.map((social) => (
+              <Link
+                key={social.label}
+                href={social.href}
+                aria-label={social.label}
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-[#5a4a3f]/30 text-xs font-semibold text-[#5a4a3f] transition hover:-translate-y-0.5 hover:border-[#2f5d2a]/50 hover:bg-[#fff2c5]/70 hover:text-[#2f5d2a]"
+              >
+                {social.icon ?? social.short}
+              </Link>
+            ))}
           </div>
-          <span className="hidden text-lg font-semibold text-[#2f5d2a] sm:block">
-            Korpa na pragu
-          </span>
-        </Link>
+        </div>
         <nav className="hidden items-center gap-6 text-sm text-[#5a4a3f] md:flex">
           {links.map((link) => {
             const active = pathname === link.href;
@@ -121,18 +135,6 @@ export default function Navbar() {
           })}
         </nav>
         <div className="flex items-center gap-3">
-          <div className="hidden items-center gap-2 md:flex">
-            {socialLinks.map((social) => (
-              <Link
-                key={social.label}
-                href={social.href}
-                aria-label={social.label}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-[#5a4a3f]/30 text-xs font-semibold text-[#5a4a3f] transition hover:-translate-y-0.5 hover:border-[#2f5d2a]/50 hover:bg-[#fff2c5]/70 hover:text-[#2f5d2a]"
-              >
-                {social.icon ?? social.short}
-              </Link>
-            ))}
-          </div>
           <Link
             href="/kontakt"
             className="rounded-full bg-[#f08a3e] px-5 py-2 text-sm font-semibold text-white shadow-md shadow-[#f08a3e]/30 transition hover:-translate-y-0.5 hover:bg-[#e27a2f]"
