@@ -44,6 +44,8 @@ export default function ProducersPage() {
       <div className="pointer-events-none absolute inset-0 opacity-[0.2]">
         <div className="absolute -top-24 right-[-6rem] h-64 w-64 rounded-full bg-[#f6c35b]/20 blur-3xl" />
         <div className="absolute top-[35%] left-[-5rem] h-56 w-56 rounded-full bg-[#7fb069]/15 blur-3xl" />
+        <div className="absolute -bottom-24 right-[20%] h-72 w-72 rounded-full bg-[#f09a3e]/20 blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(240,154,62,0.12)_0%,transparent_45%),radial-gradient(circle_at_80%_90%,rgba(127,176,105,0.12)_0%,transparent_45%)]" />
       </div>
       <h1 className="mb-8 text-3xl font-bold">Proizvođači</h1>
 
