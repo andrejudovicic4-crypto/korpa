@@ -8,6 +8,7 @@ const links = [
   { href: "/", label: "Početna" },
   { href: "/o-nama", label: "O nama" },
   { href: "/proizvodi", label: "Proizvodi" },
+  { href: "/blog", label: "Blog" },
   { href: "/proizvodjaci", label: "Proizvođači" },
   { href: "/kontakt", label: "Kontakt" },
 ];
