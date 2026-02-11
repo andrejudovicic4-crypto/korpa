@@ -118,14 +118,14 @@ export default function Navbar() {
             ))}
           </div>
         </div>
-        <nav className="hidden items-center gap-6 text-sm text-[#5a4a3f] md:flex">
+        <nav className="hidden items-center gap-4 text-sm text-[#5a4a3f] md:flex md:flex-nowrap">
           {links.map((link) => {
             const active = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`rounded-full px-3 py-2 transition hover:bg-[#fff2c5]/60 hover:text-[#2f5d2a] hover:font-semibold ${
+                className={`whitespace-nowrap rounded-full px-3 py-2 transition hover:bg-[#fff2c5]/60 hover:text-[#2f5d2a] hover:font-semibold ${
                   active ? "bg-[#fff2c5]/70 font-semibold text-[#2f5d2a]" : ""
                 }`}
               >
