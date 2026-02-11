@@ -29,6 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="sr">
+      <head>
+        <meta charSet="utf-8" />
+      </head>
       <body
         className={`${playfair.variable} ${manrope.variable} antialiased`}
       >

@@ -4,14 +4,14 @@ const categories = [
   "Sezona",
   "Recepti",
   "Zemlja i klima",
-  "PÄŤelarstvo",
-  "PorodiÄŤne priÄŤe",
+  "Pčelarstvo",
+  "Porodične priče",
 ];
 
 const featured = {
-  title: "Kako izgleda berba koja miriĹˇe na avgust",
+  title: "Kako izgleda berba koja miriše na avgust",
   excerpt:
-    "Od rose u zoru do sanduka punih plodova, prenosimo atmosferu iz malinjaka i savjete koji ÄŤuvaju kvalitet.",
+    "Od rose u zoru do sanduka punih plodova, prenosimo atmosferu iz malinjaka i savjete koji čuvaju kvalitet.",
   tag: "Sezona",
   date: "11. februar 2026.",
   read: "6 min",
@@ -19,33 +19,33 @@ const featured = {
 
 const posts = [
   {
-    title: "Pet sitnih navika koje podiĹľu ukus domaÄ‡eg sira",
+    title: "Pet sitnih navika koje podižu ukus domaćeg sira",
     excerpt:
-      "Detalji u ishrani i miru stada prave razliku. Ĺ ta smo nauÄŤili od porodice PetroviÄ‡.",
-    tag: "PorodiÄŤne priÄŤe",
+      "Detalji u ishrani i miru stada prave razliku. Šta smo naučili od porodice Petrović.",
+    tag: "Porodične priče",
     date: "9. februar 2026.",
     read: "5 min",
   },
   {
-    title: "Med, bagrem i livada: prirodni ritam pÄŤelinjaka",
+    title: "Med, bagrem i livada: prirodni ritam pčelinjaka",
     excerpt:
-      "Kada je pravo vrijeme za vrcanje i kako se ÄŤuva aroma livadskog meda.",
-    tag: "PÄŤelarstvo",
+      "Kada je pravo vrijeme za vrcanje i kako se čuva aroma livadskog meda.",
+    tag: "Pčelarstvo",
     date: "6. februar 2026.",
     read: "7 min",
   },
   {
-    title: "Zimnica bez Ĺľurbe: ajvar koji pamti jesen",
+    title: "Zimnica bez žurbe: ajvar koji pamti jesen",
     excerpt:
-      "Polagano peÄŤenje, blaga dimljenost i prava paprika iz Ĺ ipova.",
+      "Polagano pečenje, blaga dimljenost i prava paprika iz Šipova.",
     tag: "Recepti",
     date: "3. februar 2026.",
     read: "4 min",
   },
   {
-    title: "Tlo kao dom: Ĺˇta nam sezona govori o narednoj sadnji",
+    title: "Tlo kao dom: šta nam sezona govori o narednoj sadnji",
     excerpt:
-      "Jednostavan vodiÄŤ za ÄŤitanje zemlje i planiranje plodoreda.",
+      "Jednostavan vodič za čitanje zemlje i planiranje plodoreda.",
     tag: "Zemlja i klima",
     date: "31. januar 2026.",
     read: "8 min",
@@ -70,10 +70,10 @@ export default function BlogPage() {
             Blog
           </p>
           <h1 className="mt-2 text-4xl font-bold text-[#f08a3e] sm:text-5xl">
-            Poljoprivredni magazin sa duĹˇom sela
+            Poljoprivredni magazin sa dušom sela
           </h1>
           <p className="mt-3 max-w-2xl text-base text-[#f3eadc]">
-            PriÄŤe sa gazdinstava, savjeti iz sezone i recepti koji spajaju
+            Priče sa gazdinstava, savjeti iz sezone i recepti koji spajaju
             porodicu oko stola.
           </p>
 
@@ -110,7 +110,7 @@ export default function BlogPage() {
             <p className="mt-3 text-base text-[#5b4636]">{featured.excerpt}</p>
             <div className="mt-6 flex items-center gap-4 text-xs font-semibold text-[#8a7766]">
               <span>{featured.date}</span>
-              <span>â€˘</span>
+              <span>•</span>
               <span>{featured.read}</span>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function BlogPage() {
             Nedeljni izbor urednika
           </h3>
           <p className="mt-3 text-sm text-[#5b4636]">
-            Kratke preporuke: sezonsko povrÄ‡e, plan sadnje i ideje za brzu
+            Kratke preporuke: sezonsko povrće, plan sadnje i ideje za brzu
             zimnicu.
           </p>
           <div className="mt-5 rounded-2xl border border-[#f1dbb6] bg-white/70 p-4">
@@ -131,7 +131,7 @@ export default function BlogPage() {
               Savjet sedmice
             </p>
             <p className="mt-2 text-sm text-[#5b4636]">
-              Prelistaj stare biljeĹˇke iz proĹˇle sezone i uporedi berbu po
+              Prelistaj stare bilješke iz prošle sezone i uporedi berbu po
               danima.
             </p>
           </div>
@@ -155,7 +155,7 @@ export default function BlogPage() {
               <p className="mt-2 text-sm text-[#5b4636]">{post.excerpt}</p>
               <div className="mt-4 flex items-center gap-3 text-xs font-semibold text-[#8a7766]">
                 <span>{post.date}</span>
-                <span>â€˘</span>
+                <span>•</span>
                 <span>{post.read}</span>
               </div>
             </div>

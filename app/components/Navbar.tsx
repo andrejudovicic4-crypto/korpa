@@ -5,11 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { href: "/", label: "PoÄŤetna" },
+  { href: "/", label: "Početna" },
   { href: "/o-nama", label: "O nama" },
   { href: "/proizvodi", label: "Proizvodi" },
   { href: "/blog", label: "Blog" },
-  { href: "/proizvodjaci", label: "ProizvoÄ‘aÄŤi" },
+  { href: "/proizvodjaci", label: "Proizvođači" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
@@ -146,7 +146,7 @@ export default function Navbar() {
             href="/kontakt"
             className="rounded-full bg-[#f08a3e] px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-[#f08a3e]/30 transition duration-200 hover:-translate-y-0.5 hover:bg-[#e27a2f]"
           >
-            NaruÄŤi odmah
+            Naruči odmah
           </Link>
         </div>
       </div>
