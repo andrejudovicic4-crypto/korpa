@@ -5,11 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { href: "/", label: "Početna" },
+  { href: "/", label: "PoÄŤetna" },
   { href: "/o-nama", label: "O nama" },
   { href: "/proizvodi", label: "Proizvodi" },
   { href: "/blog", label: "Blog" },
-  { href: "/proizvodjaci", label: "Proizvođači" },
+  { href: "/proizvodjaci", label: "ProizvoÄ‘aÄŤi" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
@@ -87,59 +87,66 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-white/30 bg-[#efe1d0]/70 backdrop-blur-xl">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 sm:px-10">
+    <header className="sticky top-0 z-40 w-full border-b border-white/30 bg-[#efe1d0]/70 shadow-[0_10px_30px_-20px_rgba(79,55,32,0.6)] backdrop-blur-xl">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-10 py-4 lg:px-16">
         <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="flex h-28 w-28 items-center justify-center rounded-full bg-[#2e241f]/70 shadow-md shadow-black/30 backdrop-blur">
+          <Link href="/" className="flex items-center gap-4">
+            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#2e241f]/70 shadow-md shadow-black/30 backdrop-blur">
               <Image
                 src="/Novilogo.png"
                 alt="Korpa na pragu logo"
-                width={112}
-                height={112}
-                className="h-24 w-24 rounded-full object-cover"
+                width={80}
+                height={80}
+                className="h-16 w-16 rounded-full object-cover"
                 priority
               />
             </div>
-            <span className="hidden text-lg font-semibold text-[#2f5d2a] sm:block">
+            <span className="hidden text-lg font-semibold tracking-wide text-[#2f5d2a] sm:block">
               Korpa na pragu
             </span>
           </Link>
-          <div className="hidden items-center gap-2 md:flex">
-            {socialLinks.map((social) => (
-              <Link
-                key={social.label}
-                href={social.href}
-                aria-label={social.label}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-[#5a4a3f]/30 text-xs font-semibold text-[#5a4a3f] transition hover:-translate-y-0.5 hover:border-[#2f5d2a]/50 hover:bg-[#fff2c5]/70 hover:text-[#2f5d2a]"
-              >
-                {social.icon ?? social.short}
-              </Link>
-            ))}
-          </div>
         </div>
-        <nav className="hidden items-center gap-4 text-sm text-[#5a4a3f] md:flex md:flex-nowrap">
+
+        <nav className="hidden items-center gap-8 text-sm text-[#5a4a3f] md:flex md:flex-nowrap">
           {links.map((link) => {
             const active = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`whitespace-nowrap rounded-full px-3 py-2 transition hover:bg-[#fff2c5]/60 hover:text-[#2f5d2a] hover:font-semibold ${
-                  active ? "bg-[#fff2c5]/70 font-semibold text-[#2f5d2a]" : ""
+                className={`group relative whitespace-nowrap px-2 py-2 transition ${
+                  active
+                    ? "rounded-full bg-[#fff2c5]/70 font-semibold text-[#2f5d2a]"
+                    : "text-[#5a4a3f] hover:text-[#2f5d2a]"
                 }`}
               >
-                {link.label}
+                <span className="relative">
+                  {link.label}
+                  <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-[#2f5d2a] transition-all duration-300 group-hover:w-full" />
+                </span>
               </Link>
             );
           })}
         </nav>
+
         <div className="flex items-center gap-3">
+          <div className="hidden items-center gap-2 md:flex">
+            {socialLinks.map((social) => (
+              <Link
+                key={social.label}
+                href={social.href}
+                aria-label={social.label}
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-[#5a4a3f]/30 text-xs font-semibold text-[#6b5a4d] transition duration-200 hover:-translate-y-0.5 hover:scale-[1.06] hover:border-[#2f5d2a]/40 hover:text-[#2f5d2a]"
+              >
+                {social.icon ?? social.short}
+              </Link>
+            ))}
+          </div>
           <Link
             href="/kontakt"
-            className="rounded-full bg-[#f08a3e] px-5 py-2 text-sm font-semibold text-white shadow-md shadow-[#f08a3e]/30 transition hover:-translate-y-0.5 hover:bg-[#e27a2f]"
+            className="rounded-full bg-[#f08a3e] px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-[#f08a3e]/30 transition duration-200 hover:-translate-y-0.5 hover:bg-[#e27a2f]"
           >
-            Naruči odmah
+            NaruÄŤi odmah
           </Link>
         </div>
       </div>
