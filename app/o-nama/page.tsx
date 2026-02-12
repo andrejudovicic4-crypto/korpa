@@ -5,24 +5,24 @@ import Reveal from "../components/Reveal";
 
 const sections = [
   {
-    title: "Na?a pri?a",
+    title: "Naša priča",
     content:
-      "Korpa na pragu nastala je iz ?elje da doma?i proizvodi dobiju mjesto koje zaslu?uju. Grad i selo su ?esto daleko, ali povjerenje i kvalitet mogu da ih spoje.",
+      "Korpa na pragu nastala je iz želje da domaći proizvodi dobiju mjesto koje zaslužuju. Grad i selo su često daleko, ali povjerenje i kvalitet mogu da ih spoje.",
   },
   {
     title: "Misija",
     content:
-      "?elimo da porodicama omogu?imo da naru?uju provjerenu doma?u hranu, a proizvo?a?ima da bezbjedno prodaju svoje proizvode. Sve na jednom mjestu, uz moderan i jednostavan proces.",
+      "Želimo da porodicama omogućimo da naručuju provjerenu domaću hranu, a proizvođačima da bezbjedno prodaju svoje proizvode. Sve na jednom mjestu, uz moderan i jednostavan proces.",
   },
   {
     title: "Vizija",
     content:
-      "Da budemo prva asocijacija na doma?e proizvode u regionu i da o?uvamo ruralne zajednice kroz dugoro?ne, fer odnose.",
+      "Da budemo prva asocijacija na domaće proizvode u regionu i da očuvamo ruralne zajednice kroz dugoročne, fer odnose.",
   },
   {
     title: "Vrijednosti",
     content:
-      "Povjerenje, transparentnost, tradicija i po?tovanje rada doma?ina. Te vrijednosti gradimo modernom tehnologijom i pa?ljivom selekcijom.",
+      "Povjerenje, transparentnost, tradicija i poštovanje rada domaćina. Te vrijednosti gradimo modernom tehnologijom i pažljivom selekcijom.",
   },
 ];
 
@@ -40,18 +40,18 @@ export default function AboutPage() {
             </h1>
             <p className="mt-3 max-w-2xl text-base leading-7 text-[#5a4a3f]">
               Korpa na pragu nastala je iz potrebe da se tradicionalna proizvodnja
-              prilagodi savremenom na?inu ?ivota, bez gubitka kvaliteta i
-              autenti?nosti. Na?a platforma omogu?ava direktnu saradnju sa lokalnim
-              proizvo?a?ima, ?ime se obezbje?uje transparentnost, povjerenje i fer
-              odnos prema svima uklju?enima. Poseban fokus stavljamo na porijeklo
-              proizvoda, odr?ivost i podr?ku lokalnoj ekonomiji. Kroz digitalna
-              rje?enja stvaramo prostor u kojem tradicija ne nestaje, ve? dobija novu
-              vrijednost i ?ansu za razvoj.
+              prilagodi savremenom načinu života, bez gubitka kvaliteta i
+              autentičnosti. Naša platforma omogućava direktnu saradnju sa lokalnim
+              proizvođačima, čime se obezbjeđuje transparentnost, povjerenje i fer
+              odnos prema svima uključenima. Poseban fokus stavljamo na porijeklo
+              proizvoda, održivost i podršku lokalnoj ekonomiji. Kroz digitalna
+              rješenja stvaramo prostor u kojem tradicija ne nestaje, već dobija novu
+              vrijednost i šansu za razvoj.
             </p>
             <div className="relative h-[220px] w-full overflow-hidden rounded-3xl shadow-lg shadow-[#d2b896]/40 lg:col-start-2 lg:row-span-3">
               <Image
                 src="/trad.jpg"
-                alt="Doma?instvo i tradicija"
+                alt="Domaćinstvo i tradicija"
                 fill
                 className="object-cover"
               />
