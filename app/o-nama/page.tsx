@@ -46,7 +46,7 @@ export default function AboutPage() {
               odnos prema svima uključenima. Poseban fokus stavljamo na porijeklo
               proizvoda, održivost i podršku lokalnoj ekonomiji. Kroz digitalna
               rješenja stvaramo prostor u kojem tradicija ne nestaje, već dobija novu
-              vrijednost i šansu za razvoj.
+              vrijednost i šansu za razvoj
             </p>
             <div className="relative h-[220px] w-full overflow-hidden rounded-3xl shadow-lg shadow-[#d2b896]/40 lg:col-start-2 lg:row-span-3">
               <Image

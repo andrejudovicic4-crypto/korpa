@@ -88,7 +88,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-white/30 bg-[#efe1d0]/70 shadow-[0_10px_30px_-20px_rgba(79,55,32,0.6)] backdrop-blur-xl">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-10 py-4 lg:px-16">
+      <div className="mx-auto flex w-full max-w-6xl flex-nowrap items-center justify-between px-10 py-4 lg:px-16">
         <div className="flex items-center gap-4">
           <Link href="/" className="flex items-center gap-4">
             <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#2e241f]/70 shadow-md shadow-black/30 backdrop-blur">
@@ -107,14 +107,14 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <nav className="hidden items-center gap-8 text-sm text-[#5a4a3f] md:flex md:flex-nowrap">
+        <nav className="hidden flex-1 items-center justify-between gap-0 text-sm text-[#5a4a3f] md:flex md:flex-nowrap md:px-6">
           {links.map((link) => {
             const active = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`group relative whitespace-nowrap px-2 py-2 transition ${
+                className={`group relative flex-1 whitespace-nowrap px-2 py-2 text-center transition ${
                   active
                     ? "rounded-full bg-[#fff2c5]/70 font-semibold text-[#2f5d2a]"
                     : "text-[#5a4a3f] hover:text-[#2f5d2a]"
