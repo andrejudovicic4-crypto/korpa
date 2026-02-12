@@ -144,7 +144,7 @@ export default function Navbar() {
           </div>
           <Link
             href="/kontakt"
-            className="rounded-full bg-[#f08a3e] px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-[#f08a3e]/30 transition duration-200 hover:-translate-y-0.5 hover:bg-[#e27a2f]"
+            className="whitespace-nowrap rounded-full bg-[#f08a3e] px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-[#f08a3e]/30 transition duration-200 hover:-translate-y-0.5 hover:bg-[#e27a2f]"
           >
             Naruči odmah
           </Link>
