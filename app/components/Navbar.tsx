@@ -36,7 +36,7 @@ const socialLinks = [
     ),
   },
   {
-    href: "#",
+    href: "https://www.instagram.com/korpanapragu?igsh=MTd0MGM0bTVjZXB4Ng%3D%3D&utm_source=qr",
     label: "Instagram",
     short: "IG",
     icon: (
