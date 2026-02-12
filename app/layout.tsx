@@ -5,13 +5,13 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 const playfair = Playfair_Display({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   weight: ["400", "600", "700"],
   variable: "--font-display",
 });
 
 const manrope = Manrope({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-sans",
 });
